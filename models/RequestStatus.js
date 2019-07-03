@@ -4,46 +4,30 @@ module.exports = function(sequelize, DataTypes) {
   //=======================================================================
   // data types are used when defining a new model using Sequelize.define
   //=======================================================================
-  const RequestedItems = sequelize.define("RequestedItems", {
+  const requestStatus = sequelize.define("requestStatus", {
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
     requestNum: {
-      //set limit: STRING(300) = VARCHAR(300)
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    item: {
       //can change to string for boo if true=approved, false=denied
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    quantity: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    price: {
-      type: DataTypes.INTEGER,
+    itMN: {
+      //limits: FLOAT ("length", "decimals") => FLOAT(5, 4)
+      type: DataTypes.BOOLEAN,
       allowNull: false
     },
-    tax: {
-      type: DataTypes.INTEGER,
+    sP1: {
+      //limits: FLOAT ("length", "decimals") => FLOAT(5, 4)
+      type: DataTypes.BOOLEAN,
       allowNull: false
     },
-    purchaseType: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    period: {
-      //should fix limit after we specify varrying lengths of this data
-      //otherwise default characters: 255
-      type: DataTypes.STRING(999999999),
-      allowNull: false
-    },
-    vendor: {
-      type: DataTypes.STRING,
+    sP2: {
+      //limits: FLOAT ("length", "decimals") => FLOAT(5, 4)
+      type: DataTypes.BOOLEAN,
       allowNull: false
     },
     // may delete since created, and id most likely created dynamically by sequelize
@@ -51,7 +35,7 @@ module.exports = function(sequelize, DataTypes) {
     //NOTE: if you are using Sequelize migrations (ex: module.exports = {}) you will need to add the createdAt and updatedAt fields to your migration definition
     //********************************************************************************************************************************
     // Timestamps
-    createdAt: Sequelize.DATE, //should give date + time
+    createdAt: Sequelize.DATE,
     updatedAt: Sequelize.DATE
   });
 
@@ -59,10 +43,10 @@ module.exports = function(sequelize, DataTypes) {
   // May delete if no data to associate accross table data files
   //====================================================================================
 
-  //   RequestedItems.associate = function (models) {
+  //   requestStatus.associate = function (models) {
   //     // associations can be defined here
   //     //used to associate Trip.js to User.js
-  //     RequestedItems.belongsTo(models.Requests, {
+  //     requestStatus.belongsTo(models.User, {
   //       foreignKey: {
   //         allowNull: false
   //       }
@@ -71,5 +55,5 @@ module.exports = function(sequelize, DataTypes) {
   //====================================================================================
   //====================================================================================
 
-  return RequestedItems;
+  return requestStatus;
 };
