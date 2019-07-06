@@ -1,11 +1,7 @@
-module.exports = function(app) {
-  const requests = require("./routes/requests");
-  const users = require("./routes/users");
-  const requestedItems = require("./routes/requestedItems");
-  const requestStatus = require("./routes/requestStatus");
+module.exports = function (app) {
 
-  app.use("/", requests);
-  app.use("/users", users);
-  app.use("/requestedItems", requestedItems);
-  app.use("/requestStatus", requestStatus);
+  const dashboard = require("./routes/dashboard");
+
+  app.use("/", dashboard);
+
 };
