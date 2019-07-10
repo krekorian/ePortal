@@ -1,28 +1,60 @@
-<div class="sidenav">
-    <img src="profilePic.jpg" class="rounded-circle" alt="Profile Pic"> 
-    <h3 id="userName">Alexis Bieda</h3>
+<section class="navigation">
+    <div class="nav" data-spy="affix">
+        <div id="sidenav">
+            <div class="container sections">
+                <div class="row">
+                    <img src="/public/assets/images/prof.jpg" class="img-circle" alt="Profile Pic">
+                </div>
 
-    <hr>
-    
-    <img src="dashboard.png" class="float-left"> 
-    <a class="tab" href="#dashboard">Dashboard</a>
+                <div class="row">
+                    <h3 id="userName">Alexis Bieda</h3>
+                </div>
+            </div>
 
-    <img src="requests.png" class="float-left"> 
-    <a class="tab" href="#requests">Task Requests</a>
+            <hr>
 
-    <img src="approvals.png" class="float-left"> 
-    <a class="tab" href="#approvals">Pending Approvals</a>
+            <div class="container">
 
-    <hr>
-    
-    <h4>Settings</h4>
 
-    <img src="settings.png" class="float-left"> 
-    <a class="tab" href="#approvals">Settings</a>
+                <a class="row tabsOne">
+                    <i class="fas fa-columns"></i>
+                    <p>Dashboard</p>
+                </a>
 
-    <img src="notifications.png" class="float-left"> 
-    <a class="tab" href="#approvals">Notifications</a>
+                <a class="row tabs">
+                    <i class="fas fa-clipboard-check"></i>
+                    <p>Task Requests</p>
+                </a>
 
-    <img src="logout.png" class="float-left"> 
-    <a class="tab" href="#approvals">Logout</a>
-</div>
+                <a class="row tabs">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Pending Approvals</p>
+                </a>
+
+
+            </div>
+
+            <hr id="lineTwo">
+
+            <div class="container">
+                <h4 id="settingsNav">Settings</h4>
+
+                <a class="row tabs">
+                    <i class="fas fa-cog"></i>
+                    <p>Settings</p>
+                </a>
+
+                <a class="row tabs">
+                    <i class="fas fa-bell"></i>
+                    <p>Notifications</p>
+                </a>
+
+                <a class="row tabs">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <p>Logout</p>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
