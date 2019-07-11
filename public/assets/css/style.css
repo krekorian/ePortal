@@ -380,3 +380,57 @@ h6 {
     margin-bottom: 50px;
     font-size: 12px;
 }
+
+.submitButton {
+    position: absolute;
+    bottom: 45px;
+    z-index: 1;
+    left: 890px;
+    font-size: 14px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #2196F3;
+}
+
+.approveButton {
+    position: absolute;
+    bottom: 45px;
+    z-index: 1;
+    left: 880px;
+    font-size: 14px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #2196F3;
+}
+
+.denyButton {
+    position: absolute;
+    bottom: 45px;
+    z-index: 1;
+    left: 710px;
+    font-size: 14px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #B90808;
+}
+
+.denyButton:hover {
+    background-color: #DE1F1F;
+}
+
+.reviewButton:hover,
+.submitButton:hover,
+.submitButton:hover,
+.approveButton:hover {
+    background-color: #60B7FD;
+}
+
+.card-body {
+    z-index: 0;
+}
