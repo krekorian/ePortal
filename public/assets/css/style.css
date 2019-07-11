@@ -358,3 +358,25 @@ h6 {
   .slider.round:before {
     border-radius: 50%;
   }
+
+
+#loginSection {
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.loginTitle {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.login {
+    margin-left: 15px;
+}
+
+.login-help {
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 12px;
+}
